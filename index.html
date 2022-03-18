@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Home Budget | JavaScript Module</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <section class="row">
+                    <div class="col s12">
+                            <div class="center-align bold">
+                                <h3 style="font-family:Roboto Condensed; font-weight:700px; margin-top: 20px; margin-bottom: 20px;"
+                                    class=" center-align card-title">MY HOME BUDGET</h3>
+                            </div>
+                        <!-- Current budget details -->
+                        <div class="col s12">
+                            <h6 id="budget-summary" class="center-align"></h6>
+                        </div>
+                </section>
+                <!-- Rows for income and expense -->
+                <section class="row">
+                    <!-- income row -->
+                    <div class="col s12 m6">
+                        <div class="card-panel z-depth-5 center-align blue darken-4">
+                            <h5 class="white-text"
+                                style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400px;">Income</h5>
+                        </div>
+                        <div class="card row center-align z-depth-4" style="margin-left: 0;margin-right: 0;">
+                            <span>Total: </span>
+                            <span class="bold" id="total-income">0</span>
+                            <span>PLN</span>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Payment from" id="income-name" type="text" class="validate">
+                                    <label for="income-name" class="active">Income</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input type="number" id="income-amount" placeholder="Amount received">
+                                </div>
+                                <div class="col s2">
+                                    <a class="btn-floating pulse btn-medium blue darken-4"><i
+                                            class="medium material-icons" id="add-income">add</i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- expense row -->
+                    <div class="col s12 m6">
+                        <div class="card-panel z-depth-5 blue darken-4">
+                            <h5 class="center-align white-text"
+                                style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400px;">Expense</h5>
+                        </div>
+                        <div class="card row center-align z-depth-4" style="margin-left: 0;margin-right: 0;">
+                            <span>Total: </span>
+                            <span class="bold" id="total-expense">0</span>
+                            <span>PLN</span>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Payment to" id="expense-name" type="text" class="validate">
+                                    <label for="expense-name" class="active">Expenses</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input type="number" id="expense-amount" placeholder="Amount paid">
+                                </div>
+                                <div class="col s2">
+                                    <a class="btn-floating pulse btn-medium blue darken-4"><i class="material-icons"
+                                            id="add-expense">add</i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="card-action">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th class="center-align">Income Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="income-table">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s12 m6">
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th class="center-align">Expense Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expense-table">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
