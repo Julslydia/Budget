@@ -135,13 +135,12 @@ function deleteRow(entry) {
 
 function editRow(editableInput, btns) {
   editableInput.forEach((element) => {
-    element.setAttribute("true");
+    element.setAttribute("contenteditable", "true");
     element.classList.remove();
     element.classList.add();
   });
 
   toggleBtnsVisibility(btns);
-  disableAllButOneEdit(btns);
 }
 
 function toggleBtnsVisibility(btns) {
